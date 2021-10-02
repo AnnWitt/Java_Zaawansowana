@@ -1,11 +1,26 @@
-package samochodDziedziczenie;
+package CarZadanie;
 
 public class KabrioletDZ extends CarRodzic {
-
+    String kolor;
+    String marka;
+    int rocznik;
     //protected boolean dach=false;
     boolean dach=false;
 
-    KabrioletDZ() {
+    @Override
+    public String toString() {
+/*        return "KabrioletDZ{" +
+                "kolor='" + kolor + '\'' +
+                ", marka='" + marka + '\'' +
+                ", rocznik=" + rocznik +'\'' +
+                ", dach=" + dach+
+                '}';*/
+        return super.toString()+ "rozsuwanym dachem" + dach; //to jest z CarRodzic dlatego
+        //dodatkowo dach bo jego tam nie bylo
+    }
+
+    KabrioletDZ(String kolor, String marka, short rocznik) {
+        super(kolor,marka,rocznik);
         this.dach = dach;
     }
 
