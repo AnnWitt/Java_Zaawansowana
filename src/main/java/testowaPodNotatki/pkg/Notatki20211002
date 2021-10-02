@@ -1,0 +1,133 @@
+enkapsulacja (hermetyzacja) - ukruwanie pol i metod przed niezamierzonym użyciem
+dla nich poslugujemy sie getterami i settery aby moxns bylo jak najwiecej zrobic
+prywatne
+
+private
+public
+domyslne - dla pakietu
+protected - dla pakietu oraz klas dziedziczących
+
+stos i sterta
+Sterta - przechowywanie obiektw, uporzadkowany struikturowo
+Stos -  referencji oraz typow prymitywnych, nieuporzadkowany
+
+String pool - przechowywane litteralow typu string w stercie, do optymalizacji String
+string jest tworzony na koniec a nie np po kazdej iteracji pętli
+
+tworzenie obiektu  na stercie np ma referencje do sterty, null jak zmienna na nic nie
+wskazuje na stosie
+
+np
+Pies burek=new Pies
+Pies burek2=burek -> wskazuje na to samo miejsce na stosie
+
+garbage collector (wewnetrzny program javy)
+przechodzi po stercie i szuka obiektow do ktorych nie ma referencji. Nie ma wiec mozliwosci
+"oszyskania", nie usuwa tylko oznacza jako "wolny do zapisu" (ten sam adres fizyczny)
+
+String pool ->
+String ala="Ala"
+String ala2="Ala"
+sprawdza najpierw czy w string poolu na stos juz o tej tresci i wskazuje na to samo miejsce
+aby nie marnowac
+
+Jezeli by bylo za pomocą konstruktora to jest Tworxony nowy obiekt na stosie. Nie zachodza
+te optymalizacji, nie szuka w basenie. Dlatego niewskazane jest tworzenie za pomoca
+konstruktora bo niepotrzebnie zajmuje miejsce. Wskazuje na inny obiekt o tej samej wartosci
+ale nie ma to tu znaczenia. Nie ma optymalnego referencji,
+
+new String
+Tworzy obiekt i dodatkowo dokleja do poola - niewskazane
+
+Typy wyliczeniowe
+ENUM - nowy typ danych z okreslonymi wartosciami (wielka litera)
+moga posiacac konstruktory, metody, pola ale nie mozna bezposrednio wywolac konstruktora
+można w switch oraz porownac ==
+enum robimy osobno od maina (osobna "klasa")
+Bilet normalny=Bilet.NORMALNY (bez new tj bez konstruktora), zmienna typu enuma
+
+
+//----- Zad 10
+public enum Bilet {
+
+    ULGOWY_GODZINNY(2.3, 2),
+    ULGOWY_CALODNIOWY(4.3, 120),
+    NORMALNY_GODZINNY(4.3, 2),
+    NORMALNY_CALODNIOWY(8.3, 120),
+    BRAK_BILETU(0, 20),
+    ;
+
+    double cena;
+    int czasJazdyWmin;
+    int wiek;
+
+    Bilet(double cena, int czasJazdyWmin) {
+        this.cena = cena;
+        this.czasJazdyWmin = czasJazdyWmin;
+    }
+
+    double pobiezCeneBiletu() {
+        return cena;
+    }
+
+    double pobiezCzasJazdy() {
+        return czasJazdyWmin;
+    }
+
+    static void wyswietlDaneOBilecie() {
+        System.out.println("Bilet ulgowy 1-godzinny ");
+    }
+
+    static void metodaPkt10(int wiek, int czasJazdyWmin, double kwota) {
+        Bilet typBiletu;
+        if (kwota == 0) {
+            typBiletu=BRAK_BILETU;
+            System.out.println("Niewystarczajace środki na zakup dowolnego biletu "
+                    + typBiletu);}
+            else{
+                if (wiek <= 18) {
+                    if (czasJazdyWmin > 120) {
+                        typBiletu = ULGOWY_CALODNIOWY;
+                    } else {
+                        typBiletu = ULGOWY_GODZINNY;
+                    }
+
+                    boolean czyMozna = kwota > typBiletu.cena;
+                    if (czyMozna == true) {
+                        System.out.println("(ulgowy) Mozna kupic " + typBiletu);
+                    } else {
+                        System.out.println("(ulgowy)  Nie Mozna kupic " + typBiletu);
+                    }
+                } else {
+                    if (czasJazdyWmin > 120) {
+                        typBiletu = NORMALNY_CALODNIOWY;
+                    } else {
+                        typBiletu = NORMALNY_GODZINNY;
+                    }
+                    boolean czyMozna = kwota > typBiletu.cena;
+                    if (czyMozna == true) {
+                        System.out.println("(normalny) Mozna kupic " + typBiletu);
+                    } else {
+                        System.out.println("(normalny) Nie Mozna kupic " + typBiletu);
+                    }
+                }
+            }
+        }
+    }
+
+Dziedziczenie - slowo extends
+Klasa dziedzicząca (podklasa) dziedziczy pola i metody klasy nadrzędnej (nadklasy)
+•Klasa Object jest klasą ogólną po której dziedziczy (niejawnie) każda inna klasa
+•Podklasa może dziedziczyć tylko po 1 klasie
+•Ale każda podklasa może mieć kolejną podklasę
+
+nie mozna dziedzicic po wielu klasach na raz  (jawnie)
+
+np public class Mammal extends Animal
+
+super(name) odwolanie do "rodzica" tj polam, konstruktor klasy nadrzednej
+konstruktor musi pasowac do nadrzednego
+
+gdy nie podoba nam się to co mamy "w spadku"
+@Override - zachowuje swoja niezaleznosc w klasie podrzednej
+użyte nad metodą aby narzucic swoja wartosc
