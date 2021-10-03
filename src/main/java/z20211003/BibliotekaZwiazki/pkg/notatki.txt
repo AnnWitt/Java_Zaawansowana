@@ -1,0 +1,18 @@
+super(imie, nazwisko); -> wyciagniecie danych z parenta po blizniaczym konstruk
+torze. superkonstruktor, nadrzedny
+
+public class Autor extends Czlowiek {
+    String gatunek;
+
+    public Autor(String imie, String nazwisko, String gatunek) {
+        super(imie, nazwisko);
+        this.gatunek = gatunek;
+    }
+
+
+    ctrl Q - dokumentacja
+
+        egzemplarze[i].getTytul().equals(tytul)) //moze pojdzie null
+        tytul.equals(egzemplarze[i].getTytul())) //tu nie pojdzi
+
+        cos i null w srodku, wywolujemy equals na czyms co nie bedzie nulem
