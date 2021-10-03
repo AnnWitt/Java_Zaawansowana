@@ -110,3 +110,34 @@ gfdy nie chcemy aby dziedziczono - uzywamy final (class/method/zmienna) (np aby 
  to już Cat się zrobi
 
  dziedziczymy tylko z jednej abstrakcyjnej
+
+ polimorfizm - referencja ma dostep do roznych form
+
+ zmienna moze trzymac np kilka klas jak odnosi sie do zmiennej z np 3 od gory
+ Osoba andrzej=new Student ....
+
+ andrzej.przedstawsie --> idzie z metody Student
+
+ figura (oblicz pole)  (abstr)
+ -> kolo bedzie chcialo promien
+ -> prostokat a i b
+ -> kwadrat a
+ dlatego metoda musi byc samodzielnie w tych klasach
+
+ w absrtakcyjnej klasie co najmniej 1 abstr ale moga byc tez normalne
+
+ model - czastkowki
+ serwive - logika biznesowa
+
+ zwiazki miedzy klasami
+
+ "Jest" cos jest przypadkiem czegos wyzszego
+ "Zawiera" - inna klase np klase String
+
+ kompozcyja "HAS-A"
+ Ksiazka ksiazka = new Ksiazka(new Osoba(„John”, „Tolkien”),
+ „Hobbit”)
+
+ najpierw autor sie tworxy a potem sama ksiazka
+
+ dziedzxiczenie "IS-A"
