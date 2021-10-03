@@ -1,4 +1,4 @@
-package superBohater.pkg;
+package z20211002.superBohater;
 
 public class SuperBohater {
     public static void main(String[] args) {

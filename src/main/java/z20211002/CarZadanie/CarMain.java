@@ -1,4 +1,4 @@
-package CarZadanie;
+package z20211002.CarZadanie;
 
 public class CarMain {
     public static void main(String[] args) {

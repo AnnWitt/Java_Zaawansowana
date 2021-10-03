@@ -1,4 +1,4 @@
-package enumyCwiczenie.pkg;
+package z20211002.enumyCwiczenie;
 
 public enum Bilet {
 

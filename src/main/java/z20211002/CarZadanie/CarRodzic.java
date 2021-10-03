@@ -1,4 +1,4 @@
-package CarZadanie;
+package z20211002.CarZadanie;
 
 class CarRodzic {
     int predkosc=70;

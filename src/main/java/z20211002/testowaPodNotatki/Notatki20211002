@@ -79,3 +79,34 @@ gfdy nie chcemy aby dziedziczono - uzywamy final (class/method/zmienna) (np aby 
  np na okolicznosc haseł
 
  final np do stałych aby nie zmieniaja
+
+ Override tylko do metod, nie do zmiennych
+
+ //-----------
+ klasy abstrakcyjne
+ - nie mozna zainicjowac obiektu. Klasa abstr jezeli choc jedna metoda abstr
+ nie mozna new klasa np zwierze/ssak/kot - dwa pierwsze sa abstrakcyjne
+
+ metoda abstrakcyjna - ma to co zwykla metoda ale nic nei robi, nie ma ciala
+
+ public abstract int akbstrakcyjnaMedota(); //koniec
+ aby zadzialalo to musi byc w public abstract class Klasa Abstrakcyjna
+ po co? Metoda bedzie inna w roznych klasach, musza zaimplementowac samodzielnie
+ na swoj sposob np poruszanie sie a podrzedne latanie/plywanie itd
+ kontruktor jednak musi byc aby podrzedne musialy korzystac z nadrzednej
+
+ jak w mainie wpisze sie Animal any=new Animal();
+ enter i wstawia overloada/nie mozna zrobic instancji
+
+ klasa dziedziczaca po abstrakcyjnej - albo implementacja metod, które wczesniej byly
+ abstrakcyjne albo klasa tez ma byc abstrakcyjne\
+ public abstract class Mammal extends Animals
+ alt inset - podstwi, te ktore sa abstrkcyjne do ogarniecia
+ @Override  //nie jest konieczny ale chroni prze potencjalnmymi problemami
+ public voif move() {};
+ uwaga: konstruktor
+
+ Animal i Mammal obiektu nie zrobi ale jeżeli mamy pod nim np Cat, który ma metode
+ to już Cat się zrobi
+
+ dziedziczymy tylko z jednej abstrakcyjnej

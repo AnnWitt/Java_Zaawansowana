@@ -1,4 +1,4 @@
-package superBohater.pkg;
+package z20211002.superBohater;
 
  class SuperBohaterSrc {
     String nazwa;
