@@ -56,7 +56,7 @@ public class Biblioteka {
     }
 
    //zrobic po autrozesz
-    public void display2() {
+    /*public void display2() {
         Autor autor=new Autor("imie", "nazwisko", "gatunek");
         Czlowiek[] tbl2 = szukajPoAutorze(autor); //tu jest blad
         for (Czlowiek czl : tbl2) {
@@ -64,8 +64,8 @@ public class Biblioteka {
                 System.out.println(czl.getImie() + " " +
                         czl.getNazwisko() + " ->  ");
             }
-        }
-    }
+        }*/
+   // }
 
 
 }

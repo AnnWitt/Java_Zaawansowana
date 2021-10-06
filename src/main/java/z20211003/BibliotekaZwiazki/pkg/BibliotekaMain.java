@@ -15,7 +15,7 @@ public class BibliotekaMain {
 
         biblioteka1.display1();
         System.out.println("11111");
-        biblioteka1.display2();
+        //biblioteka1.display2();
         //System.out.println(biblioteka1.szukajPoTytule("Tytul1"));
 
     }
