@@ -4,21 +4,21 @@ class Point2D {
 
         float x,y;
 
-        public Point2D() {
+         Point2D() {
                 x=0;
                 y=0;
         }
 
-        public Point2D(float x, float y) {
+         Point2D(float x, float y) {
                 this.x = x;
                 this.y = y;
         }
 
-        public float getX() {
+         float getX() {
                 return x;
         }
 
-        public float getY() {
+         float getY() {
                 return y;
         }
 
@@ -27,12 +27,12 @@ class Point2D {
                 return tablica;
         }
 
-        public float setX(float x) {
+         float setX(float x) {
                 this.x = x;
                 return this.x;
         }
 
-        public float setY(float y) {
+         float setY(float y) {
                 this.y = y;
                 return this.y;
         }
