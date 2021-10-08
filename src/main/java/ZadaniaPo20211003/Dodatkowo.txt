@@ -5,6 +5,10 @@ Z załączonego do tego posta PDF'a zrobić zadania:
 a) wszystkie z sekcji: OOP - zadania
 b) wszystkie z sekcji: Typ wyliczeniwy - zadania
 W razie potrzeby, załączam również PDFa z rozwiązaniami do tych zadań.
-Jak najwięcej z: https://github.com/chodek/programowanie_I_zadania/tree/master/programowanie_I/src/main/java/zadania, nie mniej niż: autostrada, komunikacja miejska, komputer, sredniowiecze. W każdym folderze z nazwą zadania znajdziecie plik zadanie.txt - to od niego zacznijcie. Obok niego znajdują się pliki z rozwiązaniem - zajrzyjcie tam dopiero jak zrobicie swoje podejście, inaczej za mocno się zasugerujecie.
-Jeżeli utkniecie w jakimś zadaniu albo napotakcie problem z którym nie możecie sobie poradzić, piszcie na kanale #pomoc - stworzyłem go, żeby nie robić tu spamu i żeby było wyraźnie widać, kiedy ktoś prosi o pomoc. Odpowiadajcie sobie nawzajem, jeżeli umiecie pomóc - w ten sposób obie osoby na tym skorzystają! Postaram się również tam zaglądać, żeby odpowiedzieć na ew. problemy, których sami nie rozwiążecie.
+Jak najwięcej z: https://github.com/chodek/programowanie_I_zadania/tree/master/programowanie_I/src/main/java/zadania, nie mniej niż: autostrada,
+komunikacja miejska, komputer, sredniowiecze. W każdym folderze z nazwą zadania znajdziecie plik zadanie.txt - to od niego zacznijcie.
+Obok niego znajdują się pliki z rozwiązaniem - zajrzyjcie tam dopiero jak zrobicie swoje podejście, inaczej za mocno się zasugerujecie.
+Jeżeli utkniecie w jakimś zadaniu albo napotakcie problem z którym nie możecie sobie poradzić, piszcie na kanale #pomoc - stworzyłem go,
+żeby nie robić tu spamu i żeby było wyraźnie widać, kiedy ktoś prosi o pomoc. Odpowiadajcie sobie nawzajem, jeżeli umiecie pomóc - w ten
+sposób obie osoby na tym skorzystają! Postaram się również tam zaglądać, żeby odpowiedzieć na ew. problemy, których sami nie rozwiążecie.
 Powodzenia :sunglasses:

@@ -140,4 +140,19 @@ gfdy nie chcemy aby dziedziczono - uzywamy final (class/method/zmienna) (np aby 
 
  najpierw autor sie tworxy a potem sama ksiazka
 
- dziedzxiczenie "IS-A"
+ dziedzxiczenie "IS-A
+
+ instance of
+         while (licznik< komputers.length){
+
+             if (komputers[licznik] instanceof Laptop) {
+                 System.out.println("laptop");
+             } else {
+                 System.out.println(komputers[licznik].potrzebnaMoc+ " " + komputers[licznik].producent+" "
+                         +komputers[licznik].typProcesora);
+             }"
+
+             public void givenWhenObjectIsInstanceOfType_thenReturnTrue() {
+                 Circle circle = new Circle();
+                 Assert.assertTrue(circle instanceof Circle);
+             }

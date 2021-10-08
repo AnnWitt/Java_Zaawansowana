@@ -3,9 +3,6 @@ package ZadaniaPo20211003.OOP.ZgitHub.Sredniowiecze;
  class Main {
     public static void main(String[] args) {
 
-   /*     Town town=new Town();
-        town.howManyCanVote(Town.citizens);*/
-
         Citizen citizen1 = new King("krol1");
         Citizen citizen2 = new Peasant("peasant1");
         Citizen citizen3 = new Peasant("peasant2");
@@ -22,7 +19,7 @@ package ZadaniaPo20211003.OOP.ZgitHub.Sredniowiecze;
         Town town = new Town(citizens); //stworzenie miasta z tabeli citizenow
 
         town.howManyCanVote(citizens);
-        town.whoCanVoteVoid(citizens);
+       // town.whoCanVoteVoid(citizens);
 
         Citizen[] vouters= town.whoCanVoidTable(citizens);
 

@@ -1,4 +1,4 @@
-package ZadaniaPo20211003.OOP.ZgitHub.Autostrada;
+package ZadaniaPo20211003.OOP.ZgitHub.Autostrada_PoKolekcjach;
 
 import java.time.LocalDateTime;
 
