@@ -13,7 +13,7 @@ public class ZajezdniaAutobusowa extends Zajezdnie{
         return NazwyZajezdni.ZAJEZDNIA1;
     }
 
-    public ZajezdniaAutobusowa(NazwyZajezdni nazwaZajezdni, TypyPojazdow typyPojazdow, double sumaryczneZuzyciePaliwa) {
+    public ZajezdniaAutobusowa(NazwyZajezdni nazwaZajezdni, TypyPojazdow typyPojazdow) {
         super(nazwaZajezdni, typyPojazdow);
         this.sumaryczneZuzyciePaliwa = sumaryczneZuzyciePaliwa;
     }

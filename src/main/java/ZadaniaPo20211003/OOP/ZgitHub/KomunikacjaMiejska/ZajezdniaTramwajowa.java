@@ -13,7 +13,7 @@ public class ZajezdniaTramwajowa extends Zajezdnie {
         return NazwyZajezdni.ZAJEZDNIA2;
     }
 
-    public ZajezdniaTramwajowa(NazwyZajezdni nazwaZajezdni, TypyPojazdow typyPojazdow, int ogolnaLiczbaWagonow) {
+    public ZajezdniaTramwajowa(NazwyZajezdni nazwaZajezdni, TypyPojazdow typyPojazdow) {
         super(nazwaZajezdni, typyPojazdow);
         this.ogolnaLiczbaWagonow = ogolnaLiczbaWagonow;
     }

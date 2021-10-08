@@ -17,4 +17,9 @@ public class Autobus extends Pojazdy{
         super(lp, maxSpeed, typPojazdu, zajezdnie);
         this.zuzyciePaliwa = zuzyciePaliwa;
     }
+
+
+
+
+
 }
