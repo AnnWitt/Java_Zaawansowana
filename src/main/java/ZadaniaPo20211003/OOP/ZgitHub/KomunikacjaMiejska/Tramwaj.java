@@ -1,15 +1,15 @@
 package ZadaniaPo20211003.OOP.ZgitHub.KomunikacjaMiejska;
 
-public class Tramwaj extends Pojazdy{
-    int ileWagonow;
+ class Tramwaj extends Pojazdy{
+    IleWagonow ileWagonow;
 
 
     @Override
-    public Zajezdnie getZajezdnie() {
+     Zajezdnie getZajezdnie() {
         return super.getZajezdnie();
     }
 
-    public Tramwaj(int lp, int maxSpeed, TypyPojazdow typPojazdu, Zajezdnie zajezdnie, int ileWagonow) {
+     Tramwaj(int lp, int maxSpeed, TypyPojazdow typPojazdu, Zajezdnie zajezdnie, IleWagonow ileWagonow) {
         super(lp, maxSpeed, typPojazdu, zajezdnie);
         this.ileWagonow = ileWagonow;
     }

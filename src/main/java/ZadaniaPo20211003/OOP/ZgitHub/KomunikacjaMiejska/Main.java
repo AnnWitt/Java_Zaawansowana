@@ -7,9 +7,9 @@ public class Main {
 
         Pojazdy p1 = new Autobus(1, 90, TypyPojazdow.AUTOBUS, 10.5, z1);
         Pojazdy p2 = new Autobus(2, 80, TypyPojazdow.AUTOBUS, 19.5, z1);
-        Pojazdy p3 = new Tramwaj(3, 40, TypyPojazdow.TRAMWAJ, z2, 1);
-        Pojazdy p4 = new Tramwaj(4, 42, TypyPojazdow.TRAMWAJ, z2, 2);
-        Pojazdy p5 = new Tramwaj(5, 30, TypyPojazdow.TRAMWAJ, z2, 3);
+        Pojazdy p3 = new Tramwaj(3, 40, TypyPojazdow.TRAMWAJ, z2, IleWagonow.JEDEN);
+        Pojazdy p4 = new Tramwaj(4, 42, TypyPojazdow.TRAMWAJ, z2, IleWagonow.DWA);
+        Pojazdy p5 = new Tramwaj(5, 30, TypyPojazdow.TRAMWAJ, z2, IleWagonow.TRZY);
 
 
         Zajezdnie[] zajezdnie = {z1, z2};
@@ -28,7 +28,8 @@ public class Main {
         int ileWagonowOgolem=0;
         for (int i=0; i< pojazdy.length;i++) {
             if (pojazdy[i] instanceof Tramwaj) {
-                ileWagonowOgolem=ileWagonowOgolem+ (((Tramwaj) pojazdy[i]).ileWagonow);
+               // ileWagonowOgolem=ileWagonowOgolem+ (((Tramwaj) pojazdy[i]).ileWagonow);
+                ileWagonowOgolem=ileWagonowOgolem+ (((Tramwaj) pojazdy[i]).ileWagonow.getLiczbaWagonow());
             }
         }
 
@@ -51,7 +52,7 @@ public class Main {
                             pojazdy[p].getMaxSpeed() + " km/h ");
 
                     if (pojazdy[p] instanceof Tramwaj) {
-                        ileWagonowOgolem=ileWagonowOgolem+ ((Tramwaj) pojazdy[p]).ileWagonow;
+                        ileWagonowOgolem=ileWagonowOgolem+ ((Tramwaj) pojazdy[p]).ileWagonow.getLiczbaWagonow();
                         stringBuilder2.append(" |  liczba wagonów " + ((Tramwaj) pojazdy[p]).ileWagonow);
                     }
 

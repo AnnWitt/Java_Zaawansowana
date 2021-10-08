@@ -1,6 +1,6 @@
 package ZadaniaPo20211003.OOP.ZgitHub.KomunikacjaMiejska;
 
-public enum TypyPojazdow {
+ enum TypyPojazdow {
     AUTOBUS,
     TRAMWAJ;
 }
