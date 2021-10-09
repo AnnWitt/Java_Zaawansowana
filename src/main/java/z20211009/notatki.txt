@@ -51,3 +51,29 @@ mozna to objac. wyciagniecie funkcjonalnosci
  Metody interfejsy Comparable
 
  Arrays.sort metoda statyczna na klasie sort
+
+ --Typy generyczne / uogólnione
+ pisanie kodu bez wczesniejszej znajomosci typow danych
+ np sortowanie niezalezne do typow, podajemy dopiero w momencie uzycia
+ Comparable<T> interfejs generyczny
+
+ rzutowanie Czlowiek lewy=(Czlowiek)para.wezLedy() zrzutowany czlowiek
+
+ konwencja nazweski
+ E - element
+ K -klucz
+ N -liczba
+ Typ - liczba
+ V - value
+
+ S,U,V koleje n-te typy jezlei wiecej niz T
+
+ ograniczenia odgorne - czyli te klasy ktore dziedzica po innej klasie
+ public class para <T extends Czlowiek> - T dziedziczy po Człowiek //typizowana
+ w klasach gen mozna uzyc metod gen
+ para typizowana na człowika
+ public st voif zamienparke(Para<? extends Czlowiek>
+
+ odgraniczenia oddolne
+  public st voif zamienparke(Para<? super Student>
+  (student dziedziczy po człowiek. Akceptujemy tylko te klasy nad wybrana klasa (superklasy
