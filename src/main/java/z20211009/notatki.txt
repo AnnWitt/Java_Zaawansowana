@@ -1,0 +1,47 @@
+
+interfejs - typ abstrakcyjny bez danych.
+
+doczytaj roznice miedy interf a klasa abstakcyjna i kiedy uxywac
+ guru99.com = fajne porownanie
+
+
+brak konstruktora,
+wszystkie metody domyslnie public i abstract
+klasa implementuje interf.
+interf moze dziecziczyc po interfejsie - wielokrotne dziedziczenie. Moze dziedziczyc
+po wiecej niz jednym interfejsie - wiecej niz jednym. Klasy licza po jednej
+postaje tablica z obiektami roznych typow
+
+mozna polaczyc dwa rozne logicznie zbiory np dzwiek wyda zwierze i maszyna i interf.
+mozna to objac. wyciagniecie funkcjonalnosci
+
+ od java 8 moga miec ciało mimo ze abstr
+
+ jedynie finalne statyczne (na rzecz klasy a nie obiektu) pola
+
+ konwencja nazewnictwa - przymiotnik, kiedys bylo iCostam
+ Spiewajćy, biegający itd
+
+ sygnatura metody, typ, nazwa, co zwraca
+
+ static: metody nie mozna nadpisac przez dziedziczace
+ ładuje do pamieci zanim uruchomi program dlatego mozemy tym wystartowac.
+ Nie powstal jeszcze zaden obiekt ale te juz zna
+ Nie mozna zaczac programu od niestatycznej metody. nie nalezy do obiektow klasy tylko należy
+ do klasy (np main) - nie ma Main main=new main. Niestatycznie wywolujemu
+  Metoda metoda=new Metoda
+
+  Dog.jajasklasa(); (statyczna)
+  Dog dog=New Dog;
+  Dog.hau  (dla niestatecznych)
+
+  int wiek - kazdy obiekt ma swoj
+  static int wiek - wspoldzielony przed wszystkie obiekty
+
+  w interfejsie metoda statyczna ma cialo, niestatyczna nie. Je trzeba zawsze implementowac.
+  Metody statycznej nie mozna nadpisac
+
+  ze statycznego nie mozna odwolac sie do niestatycznego bo tych 2 na poczatku jeszcze nie ma
+  (byloby niepelne). static ładowane przed java
+  z niestatycznej mozna niestatyczne i statyczne
+  ze statycznej tylko statyczne

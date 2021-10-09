@@ -16,3 +16,9 @@ public class Autor extends Czlowiek {
         tytul.equals(egzemplarze[i].getTytul())) //tu nie pojdzi
 
         cos i null w srodku, wywolujemy equals na czyms co nie bedzie nulem
+
+        values() - tworzy niejako tablice enumów i przechodzi po niej
+        juz bez parametru iteracyjnego
+
+        Bilet[] bilety=values()
+

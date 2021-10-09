@@ -13,7 +13,6 @@ public enum PackageSize {
         this.max = max;
     }
 
-
     //!!!!!!!!!!!!!!!!!!!!!! wyjasnij
     static PackageSize getPackageSize(int min, int max) {
         if (min>=1 && max<=3) {
@@ -28,7 +27,8 @@ public enum PackageSize {
     }
 
     static PackageSize getPackageSize2(int min, int max) {
-       for (PackageSize packageSize:values()) {
+       for (PackageSize packageSize:values()) { //values wyciaga po kolei
+           //z enuma robiac z tego tablice
            if (min>= packageSize.min && max< packageSize.max) {
                return packageSize;
            }
