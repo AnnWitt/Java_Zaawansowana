@@ -1,5 +1,8 @@
 package z20211009.Zadanie3Pokarm;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class PokarmMain {
         //pamietaj o toString aby sam poformatowal
     public static void main(String[] args) {
@@ -16,6 +19,8 @@ public class PokarmMain {
         j3.jedz(p1);
 
         Jedzacy[] jedzacy={j1,j2,j3};
+
+        Arrays.sort(jedzacy);
 
         System.out.println(j1.ileGramowZjedzone()+ " " + j1.ilePosilkowZjedzone());
 

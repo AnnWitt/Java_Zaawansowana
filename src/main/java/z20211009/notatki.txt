@@ -45,3 +45,9 @@ mozna to objac. wyciagniecie funkcjonalnosci
   (byloby niepelne). static ładowane przed java
   z niestatycznej mozna niestatyczne i statyczne
   ze statycznej tylko statyczne
+
+  !!!!!!!!!!!!!!!!!!! Zadanie 4
+
+ Metody interfejsy Comparable
+
+ Arrays.sort metoda statyczna na klasie sort
