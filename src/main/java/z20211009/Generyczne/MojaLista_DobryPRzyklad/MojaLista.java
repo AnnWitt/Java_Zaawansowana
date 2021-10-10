@@ -1,4 +1,4 @@
-package z20211009.Generyczne.MojaLista;
+package z20211009.Generyczne.MojaLista_DobryPRzyklad;
 
 import java.util.Arrays;
 
@@ -61,19 +61,15 @@ public class MojaLista<E> { //podajac typ podajac jaki rodzaj elemntu bedzie
             }
             return true;
         }
-
-/*        for(int i=1;i<n;i++) {
-            System.out.println(tableTypElementow[i]);
-        }*/
         return false;
 
     }
 
     @Override
     public String toString() {
-        return "MojaLista{" +
-                "tableTypElementow=" + Arrays.toString(tableTypElementow) +
-                '}';
+        return "MojaLista" +
+                "(" + Arrays.toString(tableTypElementow) +
+                ')';
     }
 }
 

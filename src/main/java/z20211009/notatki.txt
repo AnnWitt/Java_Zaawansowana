@@ -77,3 +77,111 @@ mozna to objac. wyciagniecie funkcjonalnosci
  odgraniczenia oddolne
   public st voif zamienparke(Para<? super Student>
   (student dziedziczy po człowiek. Akceptujemy tylko te klasy nad wybrana klasa (superklasy
+
+  -----------------
+  Kolekcje
+Kolekcje (collections)–są to specjalne klasy w Javie przeznaczone do
+ przechowywania zbiorów obiektów, tworzących w ten sposób zestaw danych,
+ na których możemy wykonywać operacje oraz przeglądać poszczególne elementy
+
+ struktury danych,lepsze tablice, rozmiar dynamiczny, moze zachowac kolejnosc czy nie
+
+
+ Kolekcje skladaja sie z:
+ - interfejsy z abstrakcyjnymi typami danych np List, Set, MAp(ten nie nalezy do frameworku
+         collections ale dodaje sie go tak samo)
+         List<String> List<car>
+         List<Car> = new List (to by trzeba implementowac samemu na nowo  dlatego uzywamy
+         gotowych
+          List<Car> c1=new LinkedList<>()
+          List<Car> c2=new ArrayList<>()
+ - implementacje  np Arraylist
+ - Algorytmy - metody zaimplementowane na np sortowanie i wyszukiwania.
+                sa polimorficzne (wielopostaciowosc)
+              np binarysearch - szukamy liczby w tablicy, posortowanej i łapiemy
+              element srodkowy i albo "w gore" albo w dol "i dzielimy ponownie i"
+              tak do skutkue. Coraz mniejsze zbiory aż złapiemy. Im wieksze dane tym
+              wiekszy uzysk.
+              Jezeli nieposortowana to bez sensu.
+              Sam dopiera sortowanie do typu danych
+
+              lista/linkt list - lista prowadzi do elementu z innej (wezly).
+              Arraylist zaimplementowana bezwzglednie, linketlist - wzglednie
+              przelaczenie na inna wartosc - nie wymaga zmiany tablicy, tylko odniesieniu
+              do innego elementu. Szybsza w manipulacji danych. Druga tworzy obiekty w
+              pamieci
+              wstawienie i usuniecie lepsze w linkedlist ale access arraylist
+
+              Iterator<String> iterator
+              iterator.hasnext - tj czy jest kolejna wartosc
+              mozna np zrobic petle for z iteratorem
+              iterator.next zwraca kolejny element z iteracji
+
+              set, nie ma tak jak lista odwolania do indeksu
+              nie pozwala na duplikaty, aby sie dostac forech lub iterator
+
+              List<String> strings = new ArrayList<>();
+              List<String> strings = new ArrayList<>(strings);
+              List<String> strings = new hashset<>(strings);
+
+              implementacje hashset (najbardziej wydajne ale bez kolejnosci),
+              linkedhashset (link new linkedhashset zachowuje kolejnosc,
+              treeset elemensty posortowane, umieszczza nowe elementy comparatora
+
+              equals hashcode - roznica
+              eq - czy obiekt = drugiemu pod pewnymi polami
+              hashcode - przerabia obiekt na wartosc liczbowa np samochod 123 inny 12
+              pozwala na latwiejsze porownanie, zwraca inta.
+              Numer moze isc ten sam np pies i auto majace te same pola z ta sama dlugoscia
+              ///w Student
+              equals x i y zamienne
+              hashcode - oba dasza ta sama wartosc liczbowa to moga ale nie musza byc rowne
+              to moga bys inne obiekty
+
+              hash%n  -> wtedy nawiekszy wynik to n-1
+
+
+              drzwo zaczynamy od 9 i na lewo mniejsze na prawo wieksze itd
+
+              jak obiekty to okreslamy po czym
+
+                  Set<String> strings=new HashSet<>();
+
+                      strings.add("a");
+                      strings.add("a");
+                      strings.add("a"); //doda tylko raz
+
+                      Dog dog1=new Dog("imie1")
+                      Dog dog2=new Dog("imie2")
+
+                      Set<Dog> gods=new HashSet<>()
+
+            np dwa psy o tym samym wieku dostana ten sam hashcode
+
+            na Treeset nie pojdzie obiekt, nie comparable
+            musi byc comparable interfejs
+
+ctrl o - aby wstawc compaeTo
+
+Mapa - klucze, unikatowe, wartosci moga sie powtarxac, klucz -> wartosc, jak baza danych
+dostep do wartosci po  podaniu kluczy
+np wywolujemy klucz na 2 pozycji ktory prowadzi do wartosci z 5 i ta jest zwracana
+nr numer rejestracyjny na samochod
+
+KolekcjeMap –implementacje interfejsu:
+•HashMap
+•Najczęściej występująca –dobra wydajnościowo
+•Brak zachowania kolejności
+•LinkedHashMap
+•Zachowuje kolejność wpisywanych elementów (jak w Liście)
+•TreeMap (key musi byc comparable, value nie musi
+•Umieszcza nowe elementy kolekcji poprzez użycie Comparatora
+•Wszystkie elementy od razu posortowane względem klucza i zachowują swoją kolejność
+
+wykorzystywana glownie do zliczenia np typu string i jakis obiekt (po hashcodzie
+do latwego znajdowania czy obiekt juz istnieje. sortowanie po kluczach na pdstaie hashu
+
+
+ezeli kilka obiektów ma ten sam hashcode to w values robi sie lista
+
+ctrl Q do dokumentacji metody
