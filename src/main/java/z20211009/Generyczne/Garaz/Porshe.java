@@ -5,7 +5,7 @@ public class Porshe extends Samochod{
 
 
     public Porshe(String model, String kolor) {
-        super(model, kolor);
+        super("Porshe",model, kolor);
     }
 
 }
