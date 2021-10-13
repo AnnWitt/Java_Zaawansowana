@@ -1,6 +1,6 @@
 package z20211009.Comparables;
 
-public class NotComparable {
+public class NotComparable { //bo tu brakuje implementacji interfejsu
 
     int field;
 

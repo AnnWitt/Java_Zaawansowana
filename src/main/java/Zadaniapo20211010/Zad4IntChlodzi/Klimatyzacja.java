@@ -1,11 +1,11 @@
 package Zadaniapo20211010.Zad4IntChlodzi;
 
-public class Klimatyzacja implements Grzeje, Chlodzi{
+public class Klimatyzacja implements Grzeje, Chlodzi {
     double temp;
 
     @Override
     public double pobierzTemp(double temp) {
-        return this.temp=temp;
+        return this.temp = temp;
     }
 
     public double getTemp() {
@@ -14,7 +14,7 @@ public class Klimatyzacja implements Grzeje, Chlodzi{
 
     @Override
     public void schlodz(double schlodz) {
-        temp=pobierzTemp(temp)-schlodz;
+        temp = pobierzTemp(temp) - schlodz;
         System.out.print("Zmniejszono klimatyzacją temparaturę o " + schlodz + " stopni.");
         wyswietlTempWpomieszczeniu();
 
@@ -27,7 +27,7 @@ public class Klimatyzacja implements Grzeje, Chlodzi{
 
     @Override
     public void zwiekszTemp(double podgrzej) {
-        temp=pobierzTemp(temp)+podgrzej;
+        temp = pobierzTemp(temp) + podgrzej;
         System.out.print("Zwiekszono klimatyzacja temparaturę o " + podgrzej + " stopni.");
         wyswietlTempWpomieszczeniu();
     }

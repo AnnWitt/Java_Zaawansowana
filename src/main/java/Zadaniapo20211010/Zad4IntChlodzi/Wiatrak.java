@@ -1,16 +1,16 @@
 package Zadaniapo20211010.Zad4IntChlodzi;
 
-public class Wiatrak implements Chlodzi{
+public class Wiatrak implements Chlodzi {
     double temp;
 
     @Override
     public double pobierzTemp(double temp) {
-        return this.temp=temp;
+        return this.temp = temp;
     }
 
     @Override
     public void schlodz(double schlodz) {
-        temp=pobierzTemp(temp)-schlodz;
+        temp = pobierzTemp(temp) - schlodz;
         System.out.print("Zmniejszono wiatrakiem temparaturę o " + schlodz + " stopni.");
         wyswietlTempWpomieszczeniu();
     }

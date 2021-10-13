@@ -1,11 +1,11 @@
 package Zadaniapo20211010.Zad4IntChlodzi;
 
-public class Farelka implements Grzeje{
+public class Farelka implements Grzeje {
     double temp;
 
     @Override
     public double pobierzTemp(double temp) {
-        return this.temp=temp;
+        return this.temp = temp;
     }
 
     public double getTemp() {
@@ -14,7 +14,7 @@ public class Farelka implements Grzeje{
 
     @Override
     public void zwiekszTemp(double podgrzej) {
-        temp=pobierzTemp(temp)+podgrzej;
+        temp = pobierzTemp(temp) + podgrzej;
         System.out.print("Zwiekszono farelką temparaturę o " + podgrzej + " stopni.");
         wyswietlTempWpomieszczeniu();
 

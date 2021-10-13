@@ -1,17 +1,15 @@
 package z20211009.Comparables;
 
-import java.util.Comparator;
-
 public class ComparableClass implements Comparable {
-    int field;
+    int value;
 
-    public ComparableClass(int field) {
-        this.field = field;
+    public ComparableClass(int value) {
+        this.value = value;
     }
 
     @Override
     public int compareTo(Object o) {
         ComparableClass other=(ComparableClass) o;
-        return Integer.compare(this.field,other.field);
+        return Integer.compare(this.value,other.value);
     }
 }
