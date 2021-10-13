@@ -11,6 +11,9 @@ package z20211009.Instrumenty;
         b1.graj();
         g1.graj();
         p1.graj();
+        b1.test();
+        g1.test();
+        p1.test();
 
 
     }

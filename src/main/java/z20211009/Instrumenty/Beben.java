@@ -7,4 +7,9 @@ package z20211009.Instrumenty;
      public void graj() {
          System.out.println("beben");
      }
+
+     @Override
+     public void test() {
+
+     }
  }

@@ -5,4 +5,9 @@ package z20211009.Instrumenty;
      public void graj() {
          System.out.println("guitara");
      }
+
+     @Override
+      public void test() {
+         System.out.println("any");
+     }
  }
