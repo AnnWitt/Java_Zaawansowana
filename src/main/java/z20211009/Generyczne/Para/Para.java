@@ -1,4 +1,4 @@
-package z20211009.Generyczne;
+package z20211009.Generyczne.Para;
 
 public class Para<T> {
     //Para<Czlowiek>para ///zmienna na parze człowiekow - zbedne new Para<czł>
