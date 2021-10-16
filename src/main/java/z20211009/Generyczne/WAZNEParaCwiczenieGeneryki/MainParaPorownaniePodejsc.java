@@ -22,9 +22,10 @@ public class MainParaPorownaniePodejsc {
 
         Czlowiek cz1 = (Czlowiek)paraRzutowaniem2.getLewyRzut(); //na paraRzutowaniem nie dzialalo bo monika.costam() zwradalo string
         int liczba = (int) 3.4;
-        Czlowiek cz2 = (Czlowiek)paraRzutowaniem2.getPrawyRzut();
+        Czlowiek cz2 = (Czlowiek)((Czlowiek) paraRzutowaniem2.getLewyRzut()).imie;
 
         System.out.println("Zapis " + ((Czlowiek) paraRzutowaniem2.getPrawyRzut()).imie);
+
 
 //-----------------generyki-----------------------------------------------
         System.out.println("Generyki");

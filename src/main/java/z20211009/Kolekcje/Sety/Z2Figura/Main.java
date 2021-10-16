@@ -1,4 +1,4 @@
-package z20211009.Sety.Z2Figura;
+package z20211009.Kolekcje.Sety.Z2Figura;
 
 import java.util.*;
 

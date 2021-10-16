@@ -1,12 +1,15 @@
-package z20211009.Kolekcje;
+package z20211009.Kolekcje.Listy;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
+        List<Integer> intOne=new ArrayList<>();
+        List<Integer> intTwo=new LinkedList<>();
         List<String> strings = new ArrayList<>();
         List<String> strings2 = new ArrayList<>();
         System.out.println(strings);
@@ -32,6 +35,22 @@ public class Main {
 
         wyswietlDuplikaty(strings2);
         usunDupl(strings2);
+
+
+        System.out.println("Ani rozmkninki nocne - Arraylist");
+        intOne.add(3);
+        intOne.add(36);
+        intOne.add(369);
+
+        System.out.println(intOne);
+
+        intTwo.add(5);
+        intTwo.add(15);
+        intTwo.add(156);
+
+        System.out.println(intTwo);
+
+
 
 /*
 

@@ -87,6 +87,12 @@ Kolekcje (collections)–są to specjalne klasy w Javie przeznaczone do
  struktury danych,lepsze tablice, rozmiar dynamiczny, moze zachowac kolejnosc czy nie
 
 
+Lista = tablica z dynamicznym rozmiarem, uporzadkowana, z duplikatami, wywolanie nazwy wystarczy
+Set = nie ma dostępu bezpośredniengo (np po indeksie, bez duplikatów, wywolanie foreach lub iteratorem
+        Hashset - wydajnosc cacy, niezachowana kolejnosc
+        Linkedhashset - zachowuje kolejnosc jak w liscie
+        Treeset - nowe elementy umieszcza comparatorem, elementy od razu posortowane i zachowuja swoja kolejnosc
+
  Kolekcje skladaja sie z:
  - interfejsy z abstrakcyjnymi typami danych np List, Set, MAp(ten nie nalezy do frameworku
          collections ale dodaje sie go tak samo)

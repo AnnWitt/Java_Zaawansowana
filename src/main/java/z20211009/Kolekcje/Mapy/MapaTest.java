@@ -1,7 +1,6 @@
-package z20211009.Mapy;
+package z20211009.Kolekcje.Mapy;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class MapaTest {
     public static void main(String[] args) {
