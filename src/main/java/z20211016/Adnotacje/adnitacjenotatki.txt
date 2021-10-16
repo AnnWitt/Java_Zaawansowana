@@ -1,0 +1,22 @@
+adnotacje - test/overwrite itd
+metakod - moga tez wygenerowac jakis kod.
+Mozna pisac wlasne
+
+retention - kiedy ma dzialas (np w runtime
+tu wyjatkowo zminn moga byc z () - to nie metody
+
+Field[] fields = o.getClass().getDeclaredFields();
+
+tworzy tablice z obiektow, Declared to pobiera pola metody
+pytnie o np wartosc wieku w danym obiekcie
+
+//mozliwosc oszukania final. - zmiany a potem znowu zamykamy - stosujemy np jak mamy
+laczenie kilku probramow i nadpisujemy elementy. TRroche w sumie hakowanie
+nie jest to normalna praktyka. Np dointegrowujemy stary system. Lekkie zmienienie
+zachowania danej klasy
+
+field.setAccessible(true); // upubliczniam metodę int age = (int) field.get(o);
+// pobieram wartość pola field z obiektu o if (age < annotation.minValue() || age >
+annotation.maxValue()) { // weryfikuje wartość z min/max z adnotacji return false; //
+wartość wykracza poza zakres } field.setAccessible(false); // uprywatniam metodę } }
+return true; } }
