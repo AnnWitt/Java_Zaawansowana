@@ -7,7 +7,14 @@ public abstract class Czlowiek {
     public Czlowiek(String imie, String nazwisko) {
         this.imie = imie;
         this.nazwisko = nazwisko;
+
+        if (nazwisko.length()<2) {
+            throw new IllegalSurnameEx("za krotnie nazwisko " + "nazwisko to: " + getNazwisko());
+        }
+
     }
+
+
 
     public String getImie() {
         return imie;
@@ -16,4 +23,6 @@ public abstract class Czlowiek {
     public String getNazwisko() {
         return nazwisko;
     }
+
+
 }

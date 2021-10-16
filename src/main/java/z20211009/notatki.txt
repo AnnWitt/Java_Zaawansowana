@@ -187,7 +187,14 @@ KolekcjeMap –implementacje interfejsu:
 wykorzystywana glownie do zliczenia np typu string i jakis obiekt (po hashcodzie
 do latwego znajdowania czy obiekt juz istnieje. sortowanie po kluczach na pdstaie hashu
 
+regex101.com !!!!!
+
+entryset - zbior par
 
 ezeli kilka obiektów ma ten sam hashcode to w values robi sie lista
 
 ctrl Q do dokumentacji metody
+
+functionalInterface - tylko jedna metoda
+
+collections.reverse(listaOdwrocona)

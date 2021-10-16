@@ -5,6 +5,8 @@ public class Biblioteka {
     Czlowiek[] czlowiek;
 
 
+
+
     public Biblioteka(Egzemplarz[] egzemplarze) {
         this.egzemplarze = egzemplarze;
     }
@@ -13,8 +15,9 @@ public class Biblioteka {
         this.czlowiek = czlowiek;
     }
 
-    public Egzemplarz[] szukajPoTytule(String tytul) {
+    public Egzemplarz[] szukajPoTytule(String tytul) throws ExeptionJawny {
         Egzemplarz[] found = new Egzemplarz[egzemplarze.length];
+
 
         //mozna tu dodac licznik i drugi raz ta sama petle ale uzupelniac mniejsza tablice
         //wtedy tych nulli w ogole nie bedzie w tablicy
@@ -22,8 +25,15 @@ public class Biblioteka {
             //teraz kolejnosc jest wazna
             if (egzemplarze[i].getTytul().equals(tytul)) { //****
                 found[i] = egzemplarze[i];
+        /*        if (found[i]==0) {
+                    throw new ExeptionJawny();
+                }*/
             }
+
         }
+
+
+        //throw new ExeptionJawny();
         return found;
     }
 
@@ -34,7 +44,18 @@ public class Biblioteka {
 
 
     public void display1() {
-        Egzemplarz[] tbl = szukajPoTytule("Tytul1");
+        Egzemplarz[] tbl = new Egzemplarz[0]; //= szukajPoTytule("Tytul1");
+        try {
+            tbl= szukajPoTytule("Tytul1");
+        } catch (ExeptionJawny e) {
+            e.setStackTrace();
+
+/*
+//            jezeli zlapiemy to tu wykonujemy kod np opis co sie stalo i lecimy dalej
+            //jezeli w try jakis inny nic to co w nawiasie to nie zostanie obsluzony
+            e.printStackTrace(); //alternatywa dla sout*/
+
+        }
         for (Egzemplarz egzemplarz : tbl) {
             if (egzemplarz != null) {
                 System.out.println(egzemplarz.autor.imie + " " +

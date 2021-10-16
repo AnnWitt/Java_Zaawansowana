@@ -1,0 +1,36 @@
+wyjatki:
+ - jawne (checked exception) - java o nich "wie" //wywolywane przez throw
+ - niejawne (unchecked/runtime) - np dzielenie przez zero, nieistniejacy indeks tablicy
+ - bledy -niezalezne od aplikacji i javy np pamiec na serwerze. nie obslugiwac, wypisac
+ w logach (zalecenie orange) -
+
+ stacktrace (komunikat bledu te czerwone)\
+ kibana zbiera logi bledow, trzeba skonfigurowac
+
+         //jezeli mamy korzystac z naszego
+         //brak obslugi wyjatku, idzie w hierarchi coraz wyzej az jezeli
+         //w mainie nie ma to sie wywali
+
+         wyjatki try catch - usilujemy wyłapac
+
+          //po jednym try mozna wiele catchy
+
+          try {
+                      //tu wywolania metod, ktore moga spowodowac problem
+                  } catch (ClassNotFoundException e) {
+                      //w e przechowujemy wyjatek
+          //            jezeli zlapiemy to tu wykonujemy kod np opis co sie stalo i lecimy dalej
+                      //jezeli w try jakis inny nic to co w nawiasie to nie zostanie obsluzony
+                  }
+
+                  catch (IllegalArgumentException | IllegalAccessError
+                                  | IllegalMonitorStateException e)
+
+                                  od lewej sprawdza, ew wywali i dalej nie idzie
+                                  wiec warto pisac od szczeoglu do ogolu
+   jeżeli wyjatek jawny to wymaga obsluge, unchecked nie
+
+Tworzenie wlasnych wyjatkow - np illegal age
+wlasny dziedziczymy po innym np Illegalcostam extends i nasz
+//jezeli wiecej niejawnych to kazdy w osobnej klasi
+

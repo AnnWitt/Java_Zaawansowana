@@ -7,6 +7,13 @@ public class Cicrle extends Figure {
 
 
 
+public static void Circle (double r) {
+    if (r<0) {
+        throw new IllegalArgumentException("ujemny promien");
+    }
+
+}
+
     //dodac overrider
     public Cicrle(double r) {
         this.r=r;

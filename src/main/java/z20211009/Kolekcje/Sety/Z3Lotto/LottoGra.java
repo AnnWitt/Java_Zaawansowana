@@ -38,7 +38,10 @@ public class LottoGra {
     private static int zwrocWynik(Set<Object> wprowadzone, Set<Object> wylosowane) {
         Set<Object> wspolne = new HashSet<>(wprowadzone);
         wspolne.retainAll(wylosowane); //zostaje tylko obiekt zlozony z czesci wspolnej, dlateog była kopia
-       // System.out.println(wspolne);
+        /*wspolne.removeAll(wylosowane); //wywala tylko duplikaty ale z 1
+        wylosowane.removeAll(wprowadzone); //wywala tylko duplikaty
+        System.out.println(wspolne);
+        System.out.println(wylosowane);*/
         return wspolne.size();
     }
 
