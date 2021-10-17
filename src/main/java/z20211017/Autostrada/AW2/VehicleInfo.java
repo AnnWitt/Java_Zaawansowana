@@ -1,6 +1,5 @@
-package z20211017.Autostrada;
+package z20211017.Autostrada.AW2;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -14,5 +13,7 @@ public class VehicleInfo {
     final String numerRejestracyjny;
     final CarType typPojazdu;
     final LocalDateTime dataWjazdu;
+
+
 
 }

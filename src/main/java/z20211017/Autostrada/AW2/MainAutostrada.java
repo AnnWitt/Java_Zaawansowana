@@ -1,8 +1,6 @@
-package z20211017.Autostrada;
+package z20211017.Autostrada.AW2;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -33,7 +31,6 @@ public class MainAutostrada {
                 CarType typAutaKonw = CarType.valueOf(typAutaWprowadzony);
                 highway.vehicleEntry(numerRejestracyjnyWprowadzony, typAutaKonw);
                 break;
-                //tu dodac opcje jezeli nie bedize na liscie enumow try catch
             }
             case "wyjazd": { //- wyjazd NR_REJESTRACYJNY
                 System.out.println("Podaj nr rejestracyjny wyjeżdzającego pojazdu");
@@ -52,7 +49,7 @@ public class MainAutostrada {
                 break;
             }
         }
-        System.out.println(highway.mapaPojazdow);
+
 
 
 /*      //  System.out.println("mapa" + highway.mapaPojazdow);

@@ -26,3 +26,24 @@ wszystkich polach które nie są final, oraz @RequiredArgsConstructor.
 target - pełne zapisy klas, wygenerowania, przekompilowanie
 
 doczyt: biblioteka immutables (alternatywa)
+
+system.err.plintln //wtedy bedzie na czerwono bo jako blad
+valueoj zamiana stringu na enum
+
+klsy wewnetrzne, zewnatrzene i anonimowe
+
+---------------------------------
+klasy wewnetrzne gdy nie mialyby sens same, sens maja tylko z ta powyższa
+raczej z niekorzystamy w ramach tylko tj klasy. Mozna do maina ale to
+juz np wyciagniecie na zewnatrz
+
+wewnetrzna ma dostep do wszystkich zmiennych i metod zewnetrznej
+
+statyczne lepiej jak chcemy na zewnatrz wykorzystac
+
+
+lokalne klasy wew - zrobiona w mainie (w metodzie)
+lokalne nie maja modyfikatorow dostepu (ciagnie po metodzi
+
+
+anonimowa - wazna do lambd. Maja tylko jedna instancje, zawsze wewenetrzne

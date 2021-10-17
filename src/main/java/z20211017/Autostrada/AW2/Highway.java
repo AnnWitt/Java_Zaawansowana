@@ -1,4 +1,4 @@
-package z20211017.Autostrada;
+package z20211017.Autostrada.AW2;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,6 +11,14 @@ import java.util.Map;
 public class Highway {
 
     Map<String, VehicleInfo> mapaPojazdow = new HashMap<>();
+/*     - metodę vehicleEntry(String numer_rejestracyjny, oraz CarType type) -
+    która dodaje do kolekcji nową instancję VehicleInfo oraz wypisuje do
+        konsoli komunikat. Metoda nic nie zwraca.*/
+
+/*    String numerRejestracyjny;
+    CarType typPojazdu;
+    LocalDateTime dataWjazdu;
+    */
 
     void vehicleEntry(String numer_rejestracyjny, CarType carType) {
         //pole z data z automatu
@@ -28,7 +36,6 @@ public class Highway {
                     mapaPojazdow.get(numer_rejestracyjny) + " znajduje się na autostradzie ");
         } else {
             System.out.println("Nie znaleziono pojazdu na autostradzie");
-            //tu moznaby throw new i exception
         }
     }
 
