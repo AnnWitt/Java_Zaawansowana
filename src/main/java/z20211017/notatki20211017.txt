@@ -1,0 +1,28 @@
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.12</version>
+    <scope>provided</scope>
+</dependency>
+
+</dependencies>
+
+
+https://mvnrepository.com/artifact/org.projectlombok/lombok
+w xml
+compillerr annotation proessors
++ lombok z papryczka
+
+@Setter – powoduje wygenerowanie Setterów do pola/pól.
+@Getter – powoduje wygenerowanie Getterów do pola/pól.
+@ToString– powoduje wygenerowanie metody toString do klasy.
+@EqualsAndHashCode – generuje metodę Equals oraz HashCode dla klasy.
+@RequiredArgsConstructor – generuje metodę konstruktora z parametrami które muszą zawierać.
+@Data    -  powoduje  wygenerowanie  metod  @Getter,  @ToString,  @EqualsAndHashCode,  oraz  @Setter  na
+wszystkich polach które nie są final, oraz @RequiredArgsConstructor.
+
+target - pełne zapisy klas, wygenerowania, przekompilowanie
+
+doczyt: biblioteka immutables (alternatywa)
