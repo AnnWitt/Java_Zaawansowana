@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaZaawansowana" />
+        <module name="20211002" />
       </profile>
     </annotationProcessing>
   </component>
