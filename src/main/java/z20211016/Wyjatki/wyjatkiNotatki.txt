@@ -34,3 +34,29 @@ Tworzenie wlasnych wyjatkow - np illegal age
 wlasny dziedziczymy po innym np Illegalcostam extends i nasz
 //jezeli wiecej niejawnych to kazdy w osobnej klasi
 
+---> z20211003 -->? Biblioteka zwiazki IllegalSurnameEX
+
+
+public class IllegalSurnameEx extends IllegalArgumentException{
+    //mozna konstruktor ale nie trzeba
+    public IllegalSurnameEx(String s) { //niejawny - nie wymusza
+        super("Niepowrawna warosc w nazwisku " + s);
+    } //jezeli wiecej niejawnych to kazdy w osobnej klasie
+
+
+
+
+
+
+public class ExeptionJawny extends Exception{
+    public ExeptionJawny() {
+        super("Nie znaleziono ksiazki");
+    }
+
+    public void setStackTrace() {
+        System.out.println("ddd");
+    }
+}
+
+
+}
