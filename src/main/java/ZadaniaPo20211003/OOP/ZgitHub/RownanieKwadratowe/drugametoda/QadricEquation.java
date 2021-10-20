@@ -1,48 +1,32 @@
-package ZadaniaPo20211003.OOP.ZgitHub.RownanieKwadratowe;
+package ZadaniaPo20211003.OOP.ZgitHub.RownanieKwadratowe.drugametoda;
+import lombok.Data;
 
-import z20211003.BibliotekaZwiazki.pkg.IllegalSurnameEx;
-
+@Data
 class QadricEquation {
-    static double a, b, c;
-    static double delta;
+    double a;
+    double b;
+    double c; //z wartosciami by nie trafiło do konstruktora
+    double delta;
 
-
-    static void setDelta(double delta) {
-        QadricEquation.delta = delta;
-    }
-
-    static double getX() {
-
+    double getX() {
         return ((-b) / (2 * a));
-
     }
 
-    static double getX1() {
-
+    double getX1() {
         return ((-b - (Math.sqrt(delta))) / (2 * a));
-
     }
 
-    static double getX2() {
+    double getX2() {
         return ((-b + (Math.sqrt(delta))) / (2 * a));
-
     }
 
-    QadricEquation(double a, double b, double c) {
+
+    double Rownanie(double a, double b, double c) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Równanie przyjmuje postać: ");
         this.a = a;
         this.b = b;
         this.c = c;
-    }
-
-    //ax^2 + bx +c =0
-    //delta - b^2 -4ac
-
-    static double Rownanie(double a, double b, double c)  {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Równanie przyjmuje postać: ");
-        setA(a);
-        setB(b);
-        setC(c);
 
         double delta = 0;
         boolean validate = true;
@@ -70,8 +54,7 @@ class QadricEquation {
         if (validate == true) {
             delta = (Math.pow(b, 2)) - (4 * a * c);
             stringBuilder.append(" -> delta wynosi: " + delta + ".");
-            setDelta(delta);
-            //System.out.println(stringBuilder);
+            this.delta = delta;
 
             try {
                 if (delta == 0) {
@@ -83,34 +66,12 @@ class QadricEquation {
                 } else if (delta < 0) {
                     System.out.print(stringBuilder);
                     throw new ujemnaDelta();
-
                 }
             } catch (IllegalArgumentException ujemnaDelta) {
 
             }
-
         }
-
         return delta;
-    }
-
-
-    public static double getA() {
-        return a;
-    }
-
-    public static void setA(double a) {
-        QadricEquation.a = a;
-    }
-
-
-    public static void setB(double b) {
-        QadricEquation.b = b;
-    }
-
-
-    public static void setC(double c) {
-        QadricEquation.c = c;
     }
 }
 

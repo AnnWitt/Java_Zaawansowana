@@ -1,6 +1,6 @@
-package ZadaniaPo20211003.OOP.ZgitHub.RownanieKwadratowe;
+package ZadaniaPo20211003.OOP.ZgitHub.RownanieKwadratowe.drugametoda;
 
-public class ZeroweA extends IllegalArgumentException {
+ class ZeroweA extends IllegalArgumentException {
 
     ZeroweA() {
 

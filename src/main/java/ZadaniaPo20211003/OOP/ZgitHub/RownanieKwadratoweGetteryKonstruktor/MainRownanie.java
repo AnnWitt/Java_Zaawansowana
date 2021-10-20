@@ -1,6 +1,6 @@
-package ZadaniaPo20211003.OOP.ZgitHub.RownanieKwadratowe;
+package ZadaniaPo20211003.OOP.ZgitHub.RownanieKwadratoweGetteryKonstruktor;
 
-public class MainRownanie {
+ class MainRownanie {
     public static void main(String[] args) throws Exception {
 
         QadricEquation.Rownanie(2, 3, 0);
