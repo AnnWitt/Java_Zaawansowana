@@ -41,12 +41,12 @@ public class Main {
         Set<Figura> figuraTreeSet = new TreeSet<>();
         //figuraTreeSet.addAll(figuraTreeSet.Fig)
         figuraTreeSet.addAll(List.of(f1,f2,f3,f4,f5,f6));
-/*        figuraTreeSet.add(f1);
+        figuraTreeSet.add(f1);
         figuraTreeSet.add(f2);
         figuraTreeSet.add(f3);
         figuraTreeSet.add(f4);
         figuraTreeSet.add(f5);
-        figuraTreeSet.add(f6);*/
+        figuraTreeSet.add(f6);
 
         //Samo sortowanie spisz od trenera bo zjebane
 

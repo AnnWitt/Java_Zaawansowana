@@ -17,8 +17,6 @@ public class Biblioteka {
 
     public Egzemplarz[] szukajPoTytule(String tytul) throws ExeptionJawny {
         Egzemplarz[] found = new Egzemplarz[egzemplarze.length];
-
-
         //mozna tu dodac licznik i drugi raz ta sama petle ale uzupelniac mniejsza tablice
         //wtedy tych nulli w ogole nie bedzie w tablicy
         for (int i = 0; i < egzemplarze.length; i++) { //zamiast euals contains to bedzie po frazie te
@@ -31,7 +29,6 @@ public class Biblioteka {
             }
 
         }
-
 
         //throw new ExeptionJawny();
         return found;

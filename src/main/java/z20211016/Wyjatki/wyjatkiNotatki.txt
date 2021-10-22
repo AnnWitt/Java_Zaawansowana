@@ -37,6 +37,7 @@ wlasny dziedziczymy po innym np Illegalcostam extends i nasz
 ---> z20211003 -->? Biblioteka zwiazki IllegalSurnameEX
 
 
+//wlasny
 public class IllegalSurnameEx extends IllegalArgumentException{
     //mozna konstruktor ale nie trzeba
     public IllegalSurnameEx(String s) { //niejawny - nie wymusza
@@ -44,7 +45,9 @@ public class IllegalSurnameEx extends IllegalArgumentException{
     } //jezeli wiecej niejawnych to kazdy w osobnej klasie
 
 
-
+     if (nazwisko.length()<2) {
+            throw new IllegalSurnameEx("za krotnie nazwisko " + "nazwisko to: " + getNazwisko());
+        }
 
 
 
@@ -57,6 +60,26 @@ public class ExeptionJawny extends Exception{
         System.out.println("ddd");
     }
 }
+}
 
+!!!!!!!!!!!!!!!!!-------------------!!!!!!!!!!!!!!!!!!!!!!!!!!
+           try {
+               if (y == 0) {
+                   throw new CannotDivideByZeroException();
+               } else {
+                   System.out.println(x + "/" + y + " = "+ wynik);
+               }
+
+           } catch (CannotDivideByZeroException e) {
+               CannotDivideByZeroException exception=new CannotDivideByZeroException();
+               System.out.println(exception.getMessage()); //wyswetli sam tekst z supera bez sciezki
+               System.out.println("dupa");
+           }
+---
+public class CannotDivideByZeroException extends ArithmeticException {
+
+    public CannotDivideByZeroException() {
+        super("Pamiętaj cholero, nie dziel przez zero");
+    }
 
 }

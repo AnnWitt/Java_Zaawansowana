@@ -156,3 +156,21 @@ gfdy nie chcemy aby dziedziczono - uzywamy final (class/method/zmienna) (np aby 
                  Circle circle = new Circle();
                  Assert.assertTrue(circle instanceof Circle);
              }
+
+
+             enum z parametrami
+             public enum TypZaproszenia {
+                 POJEDYNCZE(1),
+                 ZOSOBATOWARZYSZACA(2);
+
+                 private int ileOsob;
+
+                 TypZaproszenia(int i){
+                     this.ileOsob=i;
+                 }
+             }
+
+             Listy
+             lista.addAll(lista2); -> sumowanie dwóch list
+
+             //lista.add(new Zaproszenie("imieBezOsobnego", "nazwiskobezOsobnego",TypZaproszenia.ZOSOBATOWARZYSZACA ));
