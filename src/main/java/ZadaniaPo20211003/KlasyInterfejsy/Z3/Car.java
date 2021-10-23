@@ -8,11 +8,9 @@ class Car {
 
     class Engine {
         TypSilnika typSilnika;
-
         Engine(TypSamochodu typSamochodu) {
             typSilnika = setEngine(typSamochodu);
         }
-
         TypSilnika setEngine(TypSamochodu typSamochodu) {
             switch (typSamochodu) {
                 case luxory: {

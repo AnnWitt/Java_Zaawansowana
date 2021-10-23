@@ -1,6 +1,9 @@
-package z20211017.Lombok;
+package z20211023.LAmbdy.StudentSortowanyLambdami;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class MainST {
 
@@ -31,10 +34,16 @@ public class MainST {
         });
 
         //-----------lambda
+        System.out.println("Lambda");
 /*        Collections.sort(ls, (Student o1, Student o2)->
                 Double.compare(o1.getAverage(),o2.getAverage()));*/
         Collections.sort(ls, Comparator.comparingDouble(Student::getAverage));
-
+        //uzycie referencji do metody
+        Collections.sort(ls, Comparator.comparingDouble(o -> o.getAverage())); //alternatywa
+        //dla kazdego o z o pobierz Average i zwroc, jak for ale jest w sorcie
+        //wywolanie na obiekcie, lambdzie
+        System.out.println(ls);
+        System.out.println("lllllamda");
 
         System.out.println(ls);
         Collections.sort(ls, new Comparator<Student>() {
@@ -45,14 +54,16 @@ public class MainST {
         });
         System.out.println(ls);
 
-Collections.sort(ls, new Comparator<Student>() {
-    @Override
-    public int compare(Student o1, Student o2) {
-        return o1.getSurname().compareTo(o2.getSurname()); //tu na obiekcie
-    }
-});
+        Collections.sort(ls, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getSurname().compareTo(o2.getSurname()); //tu na obiekcie
+            }
+        });
         System.out.println(ls);
-
+        //lambda razy dwa w zasadzie
+        Collections.sort(ls, Comparator.comparingInt(o -> o.getSurname().length()));
+        System.out.println(ls);
     }
 
 }
