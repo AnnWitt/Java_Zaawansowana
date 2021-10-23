@@ -11,12 +11,13 @@ public class BookRepository {
     Book book;
     static int licznik = 0;
     static HashMap<Integer, Book> mapRepo = new HashMap<>();
+    //static HashMap<tu dac jakies pole obiektu np isbn, Book> mapRepo = new HashMap<>();
 
     public BookRepository() {
 
     }
     // HashMap<Integer, Book> bookRepositoryMap=new HashMap<>();
-
+        //------
 
     //static wpsoldzielone przez wszystkie
     public void bookAdd(Book book) {
