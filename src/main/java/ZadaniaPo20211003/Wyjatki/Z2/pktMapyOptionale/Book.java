@@ -1,4 +1,4 @@
-package ZadaniaPo20211003.Wyjatki.Z2.pktA;
+package ZadaniaPo20211003.Wyjatki.Z2.pktMapyOptionale;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +10,10 @@ public class Book {
     String tytul;
     String autor;
     int rokWydania;
+
+    public int getIsbn() {
+        return isbn;
+    }
 
     @Override
     public String toString() {
