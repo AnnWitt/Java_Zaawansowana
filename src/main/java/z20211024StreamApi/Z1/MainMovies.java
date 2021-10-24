@@ -3,6 +3,7 @@ package z20211024StreamApi.Z1;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -16,7 +17,7 @@ public class MainMovies {
         Video v2 = new Video("Tytul2", "url2", VideoType.EPISODE);
         Video v3 = new Video("Tytul3", "url3", VideoType.PREVIEW);
         List<Video> videoList = Arrays.asList(v1,v3);
-        Stream<Video> videoStream = videoList.stream();
+        //Stream<Video> videoStream = videoList.stream();
 
         Episode epi1 = new Episode("NazwaEpizosu1", 1, videoList);
         Episode epi2 = new Episode("NazwaEpizosu2", 2, videoList);
@@ -24,20 +25,22 @@ public class MainMovies {
         Episode epi4 = new Episode("NazwaEpizosu2", 4, videoList);
 
 
-        List<Episode> episodeList = Arrays.asList(epi3, epi4, epi1);
+        List<Episode> episodeList1 = Arrays.asList(epi3, epi4, epi1);
+        List<Episode> episodeListAll = episodeList1;
         List<Episode> episodeList2 = Arrays.asList(epi1, epi2);
-        Stream<Episode> episodeStream = episodeList.stream();
+        episodeListAll.addAll(episodeList2);
+        Stream<Episode> episodeStream = episodeList1.stream();
         //Stream<Episode> episodeStream2 = episodeList2.stream();
 
 
-        Season s1 = new Season("season1name", 1, episodeList);
+        Season s1 = new Season("season1name", 1, episodeList1);
         Season s2 = new Season("season2name", 2, episodeList2);
         //Season s4 = new Season("season2name", 4, episodeList2);
         List<Season> seasonList = Arrays.asList(s1, s2);
-        Stream<Season> seasonStream = seasonList.stream();
+       // Stream<Season> seasonStream = seasonList.stream();
 
         System.out.println("1 - lista wszystkich epizodow");
-        seasonStream //jeżeli drugi raz tak zrobie to ponownie
+        seasonList.stream() //jeżeli drugi raz tak zrobie to ponownie
                 // Stream<Season> seasonStream = seasonList.stream();
                 //albo jak pnkt3
                 .flatMap(seasonZM -> seasonZM.episodes.stream())
@@ -69,7 +72,7 @@ public class MainMovies {
         //flatmap jak poziom  niżej a potem mapa ?
         System.out.println("5 - lista wszystkich nazw epizodrów");
 
-        episodeList.stream()
+        List.of(epi1).stream()
                 .map(mapper -> mapper.getEpisodeName())
                 .forEach(System.out::println);
 
