@@ -1,10 +1,12 @@
 package z20211024StreamApi.Z1;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Data
 
 class Video {
     public String title;

@@ -1,7 +1,10 @@
 package z20211024StreamApi.Z1;
 
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+import java.util.List;
+@Data
 class Episode {
     public String episodeName;
     public int episodeNumber;
@@ -18,7 +21,7 @@ class Episode {
         return "Episode{" +
                 "episodeName='" + episodeName + '\'' +
                 ", episodeNumber=" + episodeNumber +
-                ", videos=" + videos +
-                '}';
+               // ", videos=" + videos +
+                '}' ;
     }
 }

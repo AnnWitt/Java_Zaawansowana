@@ -105,3 +105,18 @@ Long result = givenList.stream()
   Function.indentity // odpowiednik (student ) -> student
 
   https://java.pl.sdacademy.pro/e-podrecznik/java_zaawansowana/programowanie_funkcyjne/
+
+
+  STREAM DWA SPOSOBY ZEJSCIA
+
+          episodeList.stream()
+                  .map(episodeZM -> episodeZM.getEpisodeName())
+                  .forEach(System.out::println);
+
+          System.out.println("metoda2 to samo");
+          List.of(s1).stream()
+                  .flatMap(mapper -> mapper
+                          .episodes.stream()
+                          .map(m2 -> m2.episodeName))
+                  .forEach(System.out::println);
+      }
