@@ -1,0 +1,52 @@
+
+pozwalaja traktowac anonimowa jako zwykla funkcje
+
+Runnable r=()->sout(cps) --> to od sout traktowane jako implementcje metody run
+-> operator lambda, to po prawej musi pasowac do interfejsu np do metody run
+rozpoznaje bo jest tylko jedna, () moga zawierać argumenty
+
+w run override z sout"testk
+
+Po co lambdy: poprawa czytelnosci zapisu
+może miec klamry (jezeli wieksza ilosc wyrazen, jak tylko jedna to nie potrzeba)
+
+Comparator<String> comparator1=(o1,o2)->{ //mozemy ale nie musimy podawac typu
+Comparator<String> comparator1=(String o1,String o2)
+bo pobiera typizowanie z comparator
+nie interesuje nas nazwa meotdy bo javaa wie, że mozesz tylko jedna w tym interfejsei
+//cialo implementowanej metody
+jeżeli ma cos zwracac to mozemy pominac return
+o1.lengh.compareTo(o2.lenght)
+};
+----------------------------
+Funkcjonalny f1=new Funkcjonalny(){
+@Override
+public int ths(Integer x) {
+return x*10
+};
+
+albo
+
+Funkcjonalny f2=(liczba)-> liczba*10;
+->f1.smt(4) --->40 *10
+nawias mozna pominac jezeli jest jeden argument
+
+}
+
+można tez za pomocą referencji zamiast wywolywania metody (bez nawiasow)
+Consumer<String> consumer=valueToAccept -> sout(valueAccept)
+Consumer<String> consumer2=valueToAccept -> System.out::println;
+Consumer<String> consumer2=System.out::println; (usiluje zaimplementowac
+metodę Accept
+
+sout
+() to wywolanie metody
+
+kiedy mozna skorzystac z referencji
+- gdy lambda ma jeden argument
+i albo arg wejsciowy jest typem z metody //na arg wyjsciowym wywolywana jest bezargum.\
+metoda
+Consumer<String> consumer3=String::lenght
+
+     Collections.sort(ls, Comparator.comparingInt(o -> o.getSurname().length()));
+        System.out.println(ls);

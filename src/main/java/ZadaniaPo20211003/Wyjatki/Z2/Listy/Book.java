@@ -1,4 +1,4 @@
-package ZadaniaPo20211003.Wyjatki.Z2;
+package ZadaniaPo20211003.Wyjatki.Z2.Listy;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
