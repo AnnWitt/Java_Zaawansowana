@@ -1,0 +1,26 @@
+
+//Main//
+Collections.sort(employeeList);
+
+
+//osobna Class//
+    class Employee implements Comparable{
+        String nazwisko;
+        int wiek;
+
+        @Override
+        public int compareTo(Object o) {
+            Employee employee=(Employee) o;
+            return Integer.compare(this.wiek, employee.wiek);
+        }
+
+
++ metoda
+
+    static void showEmplyee(List<Employee> employeeList, Function showFunction) { //jak wypisywać np wg nazwisk
+        //potem np po imieniu i zamiast pisania kolejnej metody. Nie powtarzamy kodu
+        for (Employee emp : employeeList) {
+            System.out.println(showFunction.apply(emp));
+        }
+
+    }

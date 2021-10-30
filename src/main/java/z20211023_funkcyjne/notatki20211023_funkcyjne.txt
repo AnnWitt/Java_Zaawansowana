@@ -1,0 +1,76 @@
+PROGRAMOWANIE FUNKCYJNE (INNE OD OBIEKTOWEGO, KTORE BYLO WCZESNIEJ)
+najwazniejszym narzedziem sa funkcje (w argumentach moga przyjmowacx funkcje)
+
+interfejs abstrakcyjne
+@FunctionalInterface --> pilnuje aby byla tylko jedna metoda w srodku, jedyna funkcja
+Nie musi byc oznaczony ta adnotacja, taki strażnik
+
+public interface PResenter {
+void show(String text
+}
+
+Interfejsy funkcyjne posiadają tylko i wyłącznie jedną
+                     metodę abstrakcyjną (interfejsy SAM), np. interfejs
+                     Runnable, Callable.
+SAM - 1 metoda abstr (np Runnable
+dwoch nie można ale można defaultowa
+
+zawiera domyślną implementację. Dzięki tej nowej
+składni, w ramach interfejsu funkcyjnego możemy
+deklarować więcej niż jedną metodę, z zachowaniem
+zasady pojedynczej metody abstrakcyjnej.
+
+
+
+void show(String text) --> jest avstakcyjna
+default void execute() {}  --> nie jest abstr (w ramach niej mozna skorzystac z powyższej
+tj show(String text)
+zatem interfejs nadal posiada tylko jedna abstr
+
+metoda defaultowa może mieć ciało, jest domyślna ale mozna nadpisac
+
+
+Supplier <T>   T get()
+Function<T, R>  R apply(T t)
+Consumer<T> void accept (T t)
+UnaryOperator<T, T>
+Predicate<T> boolean test(T t)
+
+interfejsy slajd 19 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+optional
+
+kontener, który może zawierać wartość inną niż - metoda isPresent
+null lub nie zawierać obiektu wcale --- boolean
+
+Movie movie = null;
+Optional<Movie> movieContainer =
+Optional.ofNullable(movie);
+movieContainer.ifPresent(System.out::println)
+;
+
+dobry opis w OptionalEX
+
+
+   public static void main(String[] args) {
+        Optional<String> stringOptional=null;
+        Optional.empty();//twoezy pust //wywolywane na klasach
+        Optional.of("dd");// przynullu rzuci wyjatkiem
+        stringOptional.ifPresent((s -> System.out.println(s))); //consumer
+        //ifpresent,isempty itd wywolywane na obiektach
+        stringOptional.orElse("dupa"); //oczekuje stringa
+        //jezeli stringoptional pusty to bedzie dupa
+        //najpierw wysietli dupa a potem wartosc stringOptional
+        //jeżeli mamy w nawiasie przerwanie działania to przerwie mimo, że mamy wartosc
+        //roznica: w 1 wykona z nawiasu, potem stwierdzi, że jednak wartosc ma i zwroci stringOptional
+        //to w nawiasie i tak sie wykona - poprosilam o dane ale w sumie juz mam ;)  -EAGER
+        stringOptional.orElseGet(()->"test"); //LAZY
+        //oczekuje suppliera
+        //nie wykona sie jezeli nie bedzie potrzeby, najpierw sprawdzi czy jest a potem ew test
+        //zwracamy optionle zamiast nulli - dobra praktyka
+        //druga dobra praktyka, nie przyjmujemy optionali
+        //metody moga zwracac optionale ale nie powinny ich przyjmowac
+
+
+        //jak cos moze byc nullem to w optionala aby uniknac dotarcia do wyjatku
+        //a wyjatek do "zakrycia"
