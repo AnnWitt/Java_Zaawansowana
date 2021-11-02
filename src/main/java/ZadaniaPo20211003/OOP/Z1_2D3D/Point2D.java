@@ -1,4 +1,4 @@
-package ZadaniaPo20211003.OOP.Z1;
+package ZadaniaPo20211003.OOP.Z1_2D3D;
 
 class Point2D {
 
