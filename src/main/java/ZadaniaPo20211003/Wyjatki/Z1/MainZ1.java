@@ -1,6 +1,5 @@
 package ZadaniaPo20211003.Wyjatki.Z1;
 
-import java.sql.SQLOutput;
 
 public class MainZ1 {
     public static void main(String[] args) {
