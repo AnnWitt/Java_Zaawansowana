@@ -28,7 +28,7 @@ public class MainMovies {
         List<Episode> episodeList1 = Arrays.asList(epi3, epi4, epi1);
         List<Episode> episodeListAll = episodeList1;
         List<Episode> episodeList2 = Arrays.asList(epi1, epi2);
-        episodeListAll.addAll(episodeList2);
+       // episodeListAll.addAll(episodeList2);
         Stream<Episode> episodeStream = episodeList1.stream();
         //Stream<Episode> episodeStream2 = episodeList2.stream();
 

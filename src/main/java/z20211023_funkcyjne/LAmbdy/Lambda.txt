@@ -1,8 +1,6 @@
 
 pozwalaja traktowac klasę anonimowa jako zwykla funkcje, skraca zapis
 
-
-
 Runnable r=()->sout(cps) --> to od sout traktowane jako implementcje metody run
 -> operator lambda, to po prawej musi pasowac do interfejsu np do metody run
 rozpoznaje bo jest tylko jedna, () moga zawierać argumenty
