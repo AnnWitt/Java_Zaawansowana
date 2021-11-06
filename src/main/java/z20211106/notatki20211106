@@ -45,3 +45,19 @@ C:\Users\Anna_\IdeaProjects\JavaZaawansowana\src\main\resources\user.txt
 resources/user.txt (z content)
 
 maven/ lifecykle, clean i instal
+
+//Reader - FileReader
+/Writer - FileWriter
+
+tu jest strumien znaków, to co bylo wczesniej to bylo do strumienia danych
+
+
+   out = new FileWriter("C:\\Users\\Anna_" +
+                    "\\IdeaProjects\\JavaZaawansowana\\src\\main\\resources" +
+                    "\\user_output.txt");*/ //wtedy nadpisze
+            out = new FileWriter("C:\\Users\\Anna_" +
+                    "\\IdeaProjects\\JavaZaawansowana\\src\\main\\resources" +
+                    "\\user_output.txt",true); //wtedy dopisze a nie nadpisze
+
+                    --------------------------
+                    buforowanie danych

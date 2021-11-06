@@ -23,7 +23,7 @@ public class ByteSteam  {
             int c;
 
             while ((c = in.read()) != -1) {
-                out.write(c);
+                out.write(c); //zapisuje po jedny byte
             }
 
         } catch (FileNotFoundException e) {
