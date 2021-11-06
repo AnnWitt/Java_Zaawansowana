@@ -61,3 +61,71 @@ tu jest strumien znaków, to co bylo wczesniej to bylo do strumienia danych
 
                     --------------------------
                     buforowanie danych
+
+////////////////////////////////////////////////// bufory i kanały
+nio - clean/flip/rewind bufor
+Channels - reprezentavcja twartego polaczenia np z zewn urzadzeniem np drukarka/portem
+/innym komponentem
+umozliwia jedna lub wiecej operacji,optymalizuje, zamyka
+
+kanal moze zawierac bufor ale nie musi/ bezpieczne dla wielowątkowosci
+kanal "zarzadza" buforem
+
+nio - pozwala na wiele kanalow, przydzielone rozne wątku
+https://java.pl.sdacademy.pro/_slides/java_zaawansowana/java_io.html#/8
+//Path jest interfejsem,
+
+
+
+//---------------------------
+Serializacja i deserializacja
+
+zamiana obiektu na dane /dane na obiekt
+jak wywala notserializableexception to w klasie implements Serializable
+
+/////////////////////////////
+wspolbiezne (1 i 2 sie wymieniaja zasobami
+rownolegle (1 watek i drugi razem w nim
+
+proces sklada się z wątków
+https://java.pl.sdacademy.pro/_slides/java_zaawansowana/programowanie_wspolbiezne_i_rownolegle.html#/
+Thread watek wykonania w probramie (extends Thread)
+dziedziczenie po Thread albo z interfejsu Runnable
+
+public class HttpAction extends Thread {
+    @Override
+    public void run() {
+        //Send http request
+    }
+}
+class HttpClient {
+    public static void main(String[] args) {
+        HttpAction httpAction = new HttpAction();
+        httpAction.start();//uruchomienie wątku
+    }
+}
+
+
+wątek stany
+
+wait czeka na akcje
+sleep na okreslony czas
+
+
+Thread.currentthread().getid()
+
+moga sie ieszac watki i sobie wchodza a parade
+nie da sie przewidziec, który kiedy przwejmie zasoby
+
+w ramach jednego watku idzie po kolei ale jak ida 2,3 watki to moga
+byc przemieszane
+
+Thread t1=new Thread(new Runnable())
+t1.start()
+
+zatrzymanie atku - jest na to metoda stop ale nie powinnismy z nej korzystac
+jest interrupt
+
+synchronized - gdy kilka watkow dotykaja jednej zmiennej to tylko jedno wchodzi na raz
+mpzna blok kopdu albo metodę
+public synchronized void run()

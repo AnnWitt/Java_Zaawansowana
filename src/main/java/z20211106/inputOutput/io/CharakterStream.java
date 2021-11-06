@@ -2,7 +2,7 @@ package z20211106.inputOutput.io;
 
 import java.io.*;
 //to jest stary sposób :)
-public class CharakterStream {
+ class CharakterStream {
 
     public static void main(String[] args) throws IOException {
 

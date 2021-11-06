@@ -2,7 +2,7 @@ package z20211106.inputOutput.io;
 
 import java.io.*;
 
-public class BuforedRW {
+ class BuforedRW {
     public static void main(String[] args) throws IOException {
 
         BufferedReader in = null;
