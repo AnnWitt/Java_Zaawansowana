@@ -1,0 +1,47 @@
+Operacje I/O (pracuje na strumieniach ale danych, nie tym co wczesnij),
+stream api<>stream - rozne pojecia
+new I/O (korzysta z buforów, roboczy obszar, umozliwia np cofanie
+
+java.io - wprowadza klasy odpowiadzialne za oeracje na strumienach
+java.nio - na wejsciu.wyjsciu, bufofory
+
+korzystjac z read/write blokujemy wykonanie programu (jak zawiera dzo to soiwania)
+probl;em blokowania wątków, wielowątkowe już new
+
+FIleInpSream in = new FIleInpSream("user.txt")
+while ((c=in.read())!=-1 {
+out.wrote(c);
+}
+
+nie zawsze nio lepsze, jak duzy plik to lepiej na io bo na nio robi sie ogromny bufor
+
+przy pracy musza byc wyjatki (w io)
+problemy braku pliku, problemu z zaczytem
+
+try catch przydaje sie finally (gdy otworxylidmy in i jest <> null to go zamykamy
+in.close
+zużywamy coraz wiecej pamieci bez tego bo "lapiemy kolejne plik". Inny watek nie
+moze sie dostac do tego pliku, strumienie trzebs zamykać po to finally. Bez wzgledu
+na to czy znalezliusmy czy nie to musimy zrobic close
+
+mozna try with resourcws aby zamykal z automaty  - implements Closable
+(screen ze slacka porownanie.png) => dwa sposoby
+
+https://java.pl.sdacademy.pro/_slides/java_zaawansowana/java_io.html#/
+
+try {
+in=new FileInputStream(uset.txt)
+out=new FileOutputStream(user_output.txt)
+
+} catch (FileNotFoundException s) {
+e.printStackTrace();
+} finally {
+close.in
+}
+
+te pliki umieszczamy w resources
+prawy myszy i patch
+C:\Users\Anna_\IdeaProjects\JavaZaawansowana\src\main\resources\user.txt
+resources/user.txt (z content)
+
+maven/ lifecykle, clean i instal

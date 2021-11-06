@@ -42,7 +42,7 @@ public class ZwierzeStreamyAWMAin {
         System.out.println("--------------------------");
         zwierzeList.stream()
                 .flatMap(a->a.bodies.stream())
-                .filter(b->b.kolor=="Czarny")
+                .filter(b->b.kolor=="Czarny") //uzyc predicate
                 .map(d->d.bodyType)
                 .forEach(System.out::println);
 
