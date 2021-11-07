@@ -129,3 +129,97 @@ jest interrupt
 synchronized - gdy kilka watkow dotykaja jednej zmiennej to tylko jedno wchodzi na raz
 mpzna blok kopdu albo metodę
 public synchronized void run()
+
+zablkowanie fragmentu kodu dla watku, poki z nim nie skonczy.
+
+blok kodu
+synchronized(){
+i tu kod, w nawiasie () na rzecz jakiego obiektu ma zapasc blokada (this) do calosci obiektu
+this.pair - ta czesc
+}
+(swego rodzaju wyscig)
+synchronizujemy niezbędne minumum
+moze byc tak, że np samowyswietlenie wyswietla niepoprawne a wartosci sa poprawne
+------------------------------------------------------------
+deadlock blokada wątkw - zakleszczenie
+jeden korzysta z zasobow drugie, a drugi z pierwszego
+
+zaczekac na wątek - polecenie join (coordinating
+
+
+threadA.join(ile milisekund - max czas czekania na watek)
+jeżeli bezarg to czekamy az skonczy prace
+(poczekaj na A tyle a tyle czasu)
+
+.poll zabierz z kolejki element odpowiednik pull/get
+
+wait wywolywana na rzecz obiektu
+notify - wiecej watkow "waiting" na ten sam wątek,
+poinformuje jednego losowego, notifyall powiadomi wszsytkich
+
+w przykladzie customer jest rachunkiem bankowym
+
+/////////////////////////////////////////////
+Callable - generyczny interfejs funkcyjny
+podobny do runable (sygnatura public void run() )
+Callable moze cos zwracac np stringa bo Implements Callable<String>
+public String call()throws Excepion - moze zwracac wartosc albo wyjatek
+obydwa wykorzystujemy w wielowątkowosci (slajd 10)
+
+Future - interfejs przyszly wynik dzialania metody asynchronicznej. Zostanie
+zwrocony jak sie zakonczy przetwarzanie operacji - pobierana jako get.
+podobnie troche jak join, czekamy aż wynik bedzie dostepny
+troche odpowiednik predictacle ale zamiast boolena da wartosc
+obietnica/mamy pewnosc, że tam cos trafi
+
+EXECUTORSERVICE
+interfejs upraszczajacy wykonywanie zadan w strybie asynchroonicznym. rozklada
+zadania po wątkach
+musza zostac recznie zamkniete albo beda trzymac watki
+1)shutdown (void) - nie przyjmuje nowych a te co są sie zakoncza
+2)shutdownnow - (lista runnabvle) nie przyjmuje nowych, usiluje zamknac istniejace
+i daje listę tego co zatrzymalismy, co zostalo w kolejce
+
+singleThreadssb.submit(()->sout)); (do runnable skieruje
+singleThreadssb.submit(()->"sout")); (do rcallable
+
+invokeany / invoke all
+
+any - kaze zaczac zadania, zwraca pierwszy i ubija reszte.
+Wyscig - 1 zwyciezca (ten szyvbszy)  a reszta kaput. tylko jeden task, ten pierwszy
+reszta, cancelled
+
+all -wykonuje zadania i zwraca liste future, wynik tych operacji
+
+lista uzupełniona "posortowana" wg kolejnosci w kodzie
+
+
+scheduler
+schedy
+
+sheduleAtFixedRate( co ma byc uruchomiana, (initial delay)pierwsze opozonienie, ile ma sie dodatkowo opoznic
+
+np czynnosc trwa 5, 1 przerwa (ten delay) i kolejny
+
+shedulewithfixeddelay
+czeka 6 sekund od zakonczenia poprzedniego zadania
+
+
+//Typy atomowe - atomic (pozwala uniknac wyscigu watkow)
+util concuretn Atomic - ubsluguje operacje atomowe na pojedynczych zmiennych
+nie ma problemu z wielowatkowoscia
+ kolejnodc "wrzutu" / rozwiaze problem bez synchronized
+ andandget - preinkrementacja
+ getandadd - postinkrementacja
+
+ VOLATILE
+ umozliwa bezpieczenstwo zmiennych przy wielu watkach. Wartosc nie jest buforowana
+ i jest zawsze odczytywany z pamieci glownej
+ np cache moze miec inna wartosc niż w glownej pamieci programu
+ Stworzy w main memory, które sa nie tylko dla wątki ale ma dostęp
+ dla wszystkich
+ int volatile wiek -> typ volatile (to nie jest atomowosc ale na pewno będzie
+ zaaktualizowana dla wszystkich watkow ale nadal bedzie problem z dostepem
+ jezeli wielowatkowo volatile AtomicINteger wiek
+ AtomicInteger (odpornosc na wielowatkowosc)
+
