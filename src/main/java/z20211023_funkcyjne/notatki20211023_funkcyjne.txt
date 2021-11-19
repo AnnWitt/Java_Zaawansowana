@@ -11,7 +11,7 @@ void show(String text
 
 Interfejsy funkcyjne posiadają tylko i wyłącznie jedną
                      metodę abstrakcyjną (interfejsy SAM), np. interfejs
-                     Runnable, Callable.
+                     Runnable, Callable, Comparator
 SAM - 1 metoda abstr (np Runnable
 dwoch nie można ale można defaultowa
 

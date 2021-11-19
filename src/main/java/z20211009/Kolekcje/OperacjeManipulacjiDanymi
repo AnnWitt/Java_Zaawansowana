@@ -1,0 +1,29 @@
+Queue -> podstawowa implementacja to LinkedLinst
+element() - zwraca element z "czoła" kolejki (ale nie usuwa go ze struktury) lub wyrzuca wyjątek NoSuchElementException w przypadku pustej kolekcji
+peek() - działa identycznie, jak metoda element, ale nie wyrzuca wyjątku w przypadku pustej kolejki
+offer() - dodaje element do kolejki i zwraca informację, czy operacja się udała
+remove() - usuwa element z "czoła" kolejki i zwraca jego wartość lub wyrzuca wyjątek NoSuchElementException w przypadku pustej kolekcji
+poll() - działa identycznie jak metoda remove, ale nie wyrzuca wyjątku w przypadku pustej kolejki
+
+
+add, remove i get wyrzucą wyjątek w przypadku niepowodzenia operacji
+offer, poll, peek zwrócą specjalną wartość w przypadku niepowodzenia operacji (null dla obiektów i false dla typu boolean).
+
+Map
+Interfejs java.util.Map jest strukturą danych, umożliwiającą operowanie na danych w postaci klucz-wartość. Każdy klucz w takim obiekcie musi być unikalny, tzn. jeden klucz może zawierać dokładnie jedną wartość.
+
+Metody mapy, które służą do wykonywania podstawowych operacji, to m.in.:
+
+put - służy do dodania odpowiedniej pary do kolekcji lub zastąpienia starej wartości nową dla konkretnego klucza
+get - służy do pobierania wartości na podstawie klucza
+remove - usuwa element na podstawie klucza (lub dodatkowo wartości)
+containsKey - zwraca informację, czy istnieje wartość w mapie dla danego klucza
+containsValue - zwraca informację, czy istnieje klucz w mapie dla danej wartości
+size - zwraca ilość par (tzw. Entry) znajdujących się w kolekcji
+isEmpty - zwraca informację, czy mapa jest pusta
+
+keySet - zwraca zbiór kluczy jako Set
+values- zwraca wszystkie wartości jako Collection
+entrySet: zwraca Set obiektów klucz-wartość. Pojedyncza para jest reprezentowana przez klasę wewnętrzną Map.Entry.
+
+

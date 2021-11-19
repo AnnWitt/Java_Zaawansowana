@@ -2,7 +2,7 @@ package Zadaniapo20211010.CwiczenieAWwlasne;
 
 import java.util.Locale;
 
-public class Gen1<E> extends AW2{
+public class Gen1<E> extends AW2 {
     E[] tblWGen1;
 
     @Override

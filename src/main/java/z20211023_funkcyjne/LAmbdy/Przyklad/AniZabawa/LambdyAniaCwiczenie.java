@@ -19,11 +19,12 @@ public class LambdyAniaCwiczenie {
 
         System.out.println("---------------------------------");
         IFzeStringiem zapisZLambdami = (string) -> {
-            return "test z lambdami " + string;
+            return "test z lambdami 3 " + string;
         };
+        System.out.println(zapisZLambdami.wInterfejsieFunkcyjnymBezCiala("zalamka"));
 
         IFzeStringiem zapisZLambdami2 = (string) -> "test z lambdami " + string;
-        System.out.println(zapisZLambdami.wInterfejsieFunkcyjnymBezCiala("any"));
+        System.out.println(zapisZLambdami2.wInterfejsieFunkcyjnymBezCiala("any"));
 
         System.out.println("-----------------Bez----------------");
         IFbezArgumentow bezArg = () -> System.out.println("Bez niczego");

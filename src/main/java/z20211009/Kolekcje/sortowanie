@@ -24,3 +24,34 @@ Collections.sort(employeeList);
         }
 
     }
+
+Sortowanie
+Porównywanie elementów kolekcji w Javie, realizowane jest za pomocą generycznych interfejsów:
+
+Comparator<T>, który pozwala na porównanie dwóch obiektów tego samego typu za pomocą metody compare
+Comparable<T>, który porównuje aktualny obiekt z obiektem pewnego typu za pomocą metody compareTo.
+Metody compare i compareTo zwracają wartość int. W przypadku metody compareTo, konkretne wartości oznaczają:
+
+wartość większa od 0 oznacza, że obiekt porównywany powinien się znaleźć przed obiektem bazowym
+wartość równa 0 oznacza, że obiekty mają tę samą wartość
+wartość mniejsza od 0 oznacza, że obiekt bazowy powinien się znaleźć przed obiektem, z którym porównujemy.
+Na przykład:
+
+
+Integer x = 3;
+System.out.println(x.compareTo(2)); // 1
+System.out.println(x.compareTo(3)); // 0
+System.out.println(x.compareTo(4)); // -1
+
+Z kolei metoda compare powinna zwracać wartość:
+
+mniejszą niż 0, jeżeli pierwszy argument powinien znaleźć się przed drugim
+równą 0, jeżeli oba obiekty są sobie równe
+większą niż 0, jeżeli pierwszy argument powinien znaleźć się po drugim
+Na przykład:
+
+
+Comparator<Integer> intComparator = Comparator.naturalOrder();
+System.out.println(intComparator.compare(1, 2)); // -1
+System.out.println(intComparator.compare(2, 2)); // 0
+System.out.println(intComparator.compare(2, 1)); // 1
